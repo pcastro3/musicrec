@@ -18,12 +18,12 @@
 
 async function getArtist() {
   const input = await document.getElementById('artist').value;
-  const artist = 'cher';
+  // const artist = 'cher';
 
   const result = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=${input}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
 
   const data = await result.json();
+  const name = data.similarartists.artist[0].name;
+  document.getElementById('name').textContent = name;
   console.log(data);
 }
-
-getArtist();
