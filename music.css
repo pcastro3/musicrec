@@ -1,18 +1,119 @@
+.wallpaper{
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+
+.heading {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 6rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-shadow: 6px 7px 8px black;
+}
+
+.delay {
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.animate {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: .85;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: .9;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeDown {
+  -webkit-animation-name: fadeDown;
+  animation-name: fadeDown;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: .9;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    background-color: black;
+  }
+
+  to {
+    opacity: .85;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 #show {
   width: 300px;
   height: 200px;
   background-color: lightblue;
   border-radius: 10px;
+  opacity: .7;
 }
 
-#name {
+.name {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 8px;
+}
+
+.artist {
+  margin-top: 80px;
 }
 
 .info {
   display: flex;
   flex-direction: row;
-  margin: auto;
-  width: 50px;
+  justify-content: center;
+
 }
