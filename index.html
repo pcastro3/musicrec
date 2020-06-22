@@ -13,20 +13,23 @@
 </head>
 
   <body class="wallpaper animate delay fadeIn">
-    <div class="">
-      <h1 class="heading delay animate fadeDown">Muse Finder</h1>
+    <div class="main">
+      <h1 class="heading animate delay fadeDown">Muse Finder</h1>
       <input type="text" name="" value="" class="artist" placeholder="Ex: Coldplay">
       <br>
-      <button id="submit" onclick="getArtist();" type="button" name="button">Recommend Me!</button>
-      <div id="show">
-        <p class="info">Similar Artists:
-          <div class="name"></div>
-          <div class="name"></div>
-          <div class="name"></div>
-          <div class="name"></div>
-          <div class="name"></div>
-        </p>
-      </div>
+      <button class="submit" onclick="getArtist();" type="button" name="button">Recommend Me!</button>
+      <table>
+        <tbody id="hidden">
+          <tr>
+            <th class="info">Similar Artists</th>
+          </tr>
+          <tr class="name"></tr>
+          <tr class="name"></tr>
+          <tr class="name"></tr>
+          <tr class="name"></tr>
+          <tr class="name"></tr>
+        </tbody>
+      </table>
     </div>
 
   </body>
