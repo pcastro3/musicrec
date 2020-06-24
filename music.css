@@ -49,17 +49,22 @@ tr {
   display: none;
 }
 
-.info {
+/* .info {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
 .name {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 2rem;
+}
+
+.image {
+  width: auto;
+  height: 5rem;
 }
 
 .artist {
