@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Poppins', sans-serif;
   }
 
 .wallpaper{
@@ -23,6 +23,10 @@
   text-shadow: 6px 7px 8px black;
 }
 
+table {
+  width: 70%;
+}
+
 tbody {
   display: block;
   background-color: #231F25;
@@ -31,8 +35,19 @@ tbody {
   color: lightgrey;
 }
 
-tr {
-  border-bottom: 1px solid black;
+.space {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#even {
+  background-color: #201D42;
+}
+
+.top {
+  color: lightgrey;
+  text-decoration: none;
 }
 
 .submit {
@@ -50,11 +65,13 @@ tr {
   display: none;
 }
 
-/* .info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #960396;
+}
 
 .name {
   display: flex;
@@ -70,6 +87,13 @@ tr {
 
 .artist {
   border: none;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem;
 }
 
 /* ANIMATIONS */
