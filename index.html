@@ -16,8 +16,17 @@
   <body class="wallpaper animate delay fadeIn">
     <div class="main">
       <h1 class="heading animate delay fadeDown">Muse Finder</h1>
-      <input type="text" name="" value="" class="artist" placeholder="Ex: Coldplay">
-      <br>
+
+      <ul id="growing-search-freebie">
+        <li>
+          <div class="growing-search">
+            <div class="input">
+              <input type="text" name="search" class="artist" placeholder="Ex: Muse" autocomplete="off"/>
+            </div>
+          </div>
+        </li>
+      </ul>
+
       <button class="submit" onclick="getArtist();" type="button" name="button">Recommend Me!</button>
       <table>
         <tbody id="hidden">
