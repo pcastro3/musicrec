@@ -9,6 +9,32 @@
   background-image: url(/images/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  height: 120vh;
+  /* position: relative; */
+}
+
+@media screen and (max-width: 898px) {
+  .wallpaper {
+    height: 126vh;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .wallpaper {
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .wallpaper {
+    height: 115vh;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .heading {
+    height: 100vh;
+  }
 }
 
 /* MUSE FINDER */
@@ -26,6 +52,50 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 920px) {
+  .heading {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .heading {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 709px) {
+  .heading {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .heading {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .heading {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+}
+
 
 /* INPUT */
 
@@ -89,6 +159,13 @@ ul#growing-search-freebie {
 
 table {
   width: 70%;
+  position: relative;
+}
+
+@media screen and (max-width: 557px) {
+  table {
+    width: 100vw;
+  }
 }
 
 tbody {
@@ -100,6 +177,86 @@ tbody {
   background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(52,46,55,1) 50%, rgba(0,0,0,1) 100%);
   background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(52,46,55,1) 50%, rgba(0,0,0,1) 100%);
   background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(52,46,55,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+@media screen and (max-width: 1155px) {
+  tbody {
+    height: 72vh;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  tbody {
+    height: 72vh;
+  }
+}
+
+@media screen and (max-width: 898px) {
+  tbody {
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 813px) {
+  tbody {
+    height: 78vh;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  tbody {
+    height: 82vh;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  tbody {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  tbody {
+    height: 76vh;
+    font-size: .8rem;
+  }
+}
+
+/* @media screen and (width: 375px) and (height: 812px) {
+  tbody {
+    height: 71vh;
+    font-size: .7rem;
+  }
+}
+
+TRY SPECIFIC MQ's
+
+@media screen and (height: 736px) and (max-width: ) {
+  tbody {
+    height: 79vh;
+    font-size: .8rem;
+  }
+} */
+
+@media screen and (max-width: 375px) {
+  tbody {
+    height: 76vh;
+    font-size: .7rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  tbody {
+    height: 76vh;
+    font-size: .7rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  tbody {
+    height: 70vh;
+    font-size: .6rem;
+  }
 }
 
 .space {
@@ -120,6 +277,8 @@ tbody {
   text-decoration: none;
 }
 
+/* BUTTON */
+
 .submit {
   cursor: pointer;
   border-radius: 16px;
@@ -127,12 +286,15 @@ tbody {
   margin: 2rem;
   padding: .5rem;
   outline: none;
+  background-color: lightsteelblue;
 }
 
 .submit:hover {
   font-size: .8rem;
   transition: .2s;
 }
+
+/* TABLE */
 
 #hidden {
   display: none;
@@ -160,6 +322,12 @@ tbody {
 .image {
   width: auto;
   height: 5rem;
+}
+
+@media screen and (max-width: 330px) {
+  .image {
+    height: 4rem;
+  }
 }
 
 .artist {
