@@ -34,6 +34,7 @@
 @media screen and (max-width: 330px) {
   .heading {
     height: 100vh;
+    margin-bottom: -40rem !important;
   }
 }
 
@@ -280,18 +281,38 @@ TRY SPECIFIC MQ's
 /* BUTTON */
 
 .submit {
-  cursor: pointer;
+  /* cursor: pointer;
   border-radius: 16px;
   border: 1px solid transparent;
-  margin: 2rem;
   padding: .5rem;
   outline: none;
-  background-color: lightsteelblue;
+  background-color: lightsteelblue; */
+  font-family: 'Roboto', sans-serif;
+
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* background: #B588FF; */
+  /* background: #60a3bc; */
+  padding: 1.2em;
+  margin: 2em;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  outline: none;
+  text-shadow: 3px 2px 6px black;
+  letter-spacing: .15em;
+  background: -webkit-linear-gradient(left, rgba(181,136,255,1) 35%, rgba(96,74,133,1) 100%);
+  background: -o-linear-gradient(left, rgba(181,136,255,1) 35%, rgba(96,74,133,1) 100%);
+  background: linear-gradient(to right, rgba(181,136,255,1) 35%, rgba(96,74,133,1) 100%);
 }
 
 .submit:hover {
-  font-size: .8rem;
-  transition: .2s;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
 }
 
 /* TABLE */
