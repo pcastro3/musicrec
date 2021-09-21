@@ -223,22 +223,6 @@ tbody {
   }
 }
 
-/* @media screen and (width: 375px) and (height: 812px) {
-  tbody {
-    height: 71vh;
-    font-size: .7rem;
-  }
-}
-
-TRY SPECIFIC MQ's
-
-@media screen and (height: 736px) and (max-width: ) {
-  tbody {
-    height: 79vh;
-    font-size: .8rem;
-  }
-} */
-
 @media screen and (max-width: 375px) {
   tbody {
     height: 76vh;
