@@ -3,29 +3,30 @@
 // INPUT ARTIST AND FETCH 5 SIMILAR
 
 async function getArtist() {
-  const input = await document.querySelector('.artist').value;
+  const input = await document.querySelector('.artist')! as HTMLInputElement;
+  const inputType = await input.value;
 
-  const api = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=${input}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
+  const api: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
 
-  let api2 = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${input}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
+  let api2: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
 
-  let api3 = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${input}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`)
+  let api3: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`)
 
   const data = await api.json();
   let data2 = await api2.json();
   let data3 = await api3.json();
- 
+
   const name = await document.querySelectorAll('.name');
   const image = await document.querySelectorAll('.image');
   const track = await document.querySelectorAll('.track');
   const url = await document.querySelectorAll('.url');
   const top = await document.querySelectorAll('.top');
 
-  const name5 = await [];
-  const image5 = await [];
-  const track3 = await [];
-  const url5 = await [];
-  const top5 = await [];
+  const name5: string[] = await [];
+  const image5: string[] = await [];
+  const track3: string[] = await [];
+  const url5: string[] = await [];
+  const top5: string[] = await [];
 
   for (var i = 0; i < 5; i++) {
     name5.push(data.similarartists.artist[i].name);

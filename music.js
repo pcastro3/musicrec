@@ -39,75 +39,78 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 // INPUT ARTIST AND FETCH 5 SIMILAR
 function getArtist() {
     return __awaiter(this, void 0, void 0, function () {
-        var input, api, api2, api3, data, data2, data3, name, image, track, url, top, name5, image5, track3, url5, top5, i, _a, _b, _c, _d, _e, _f, _g, _h, hide;
+        var input, inputType, api, api2, api3, data, data2, data3, name, image, track, url, top, name5, image5, track3, url5, top5, i, _a, _b, _c, _d, _e, _f, _g, _h, hide;
         return __generator(this, function (_j) {
             switch (_j.label) {
-                case 0: return [4 /*yield*/, document.querySelector('.artist').value];
+                case 0: return [4 /*yield*/, document.querySelector('.artist')];
                 case 1:
                     input = _j.sent();
-                    return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=" + input + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
+                    return [4 /*yield*/, input.value];
                 case 2:
-                    api = _j.sent();
-                    return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + input + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
+                    inputType = _j.sent();
+                    return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=" + inputType + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
                 case 3:
-                    api2 = _j.sent();
-                    return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + input + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
+                    api = _j.sent();
+                    return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + inputType + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
                 case 4:
+                    api2 = _j.sent();
+                    return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + inputType + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
+                case 5:
                     api3 = _j.sent();
                     return [4 /*yield*/, api.json()];
-                case 5:
+                case 6:
                     data = _j.sent();
                     return [4 /*yield*/, api2.json()];
-                case 6:
+                case 7:
                     data2 = _j.sent();
                     return [4 /*yield*/, api3.json()];
-                case 7:
+                case 8:
                     data3 = _j.sent();
                     return [4 /*yield*/, document.querySelectorAll('.name')];
-                case 8:
+                case 9:
                     name = _j.sent();
                     return [4 /*yield*/, document.querySelectorAll('.image')];
-                case 9:
+                case 10:
                     image = _j.sent();
                     return [4 /*yield*/, document.querySelectorAll('.track')];
-                case 10:
+                case 11:
                     track = _j.sent();
                     return [4 /*yield*/, document.querySelectorAll('.url')];
-                case 11:
+                case 12:
                     url = _j.sent();
                     return [4 /*yield*/, document.querySelectorAll('.top')];
-                case 12:
+                case 13:
                     top = _j.sent();
                     return [4 /*yield*/, []];
-                case 13:
+                case 14:
                     name5 = _j.sent();
                     return [4 /*yield*/, []];
-                case 14:
+                case 15:
                     image5 = _j.sent();
                     return [4 /*yield*/, []];
-                case 15:
+                case 16:
                     track3 = _j.sent();
                     return [4 /*yield*/, []];
-                case 16:
+                case 17:
                     url5 = _j.sent();
                     return [4 /*yield*/, []];
-                case 17:
+                case 18:
                     top5 = _j.sent();
                     i = 0;
-                    _j.label = 18;
-                case 18:
-                    if (!(i < 5)) return [3 /*break*/, 24];
+                    _j.label = 19;
+                case 19:
+                    if (!(i < 5)) return [3 /*break*/, 25];
                     name5.push(data.similarartists.artist[i].name);
                     name[i].textContent = name5[i];
                     _a = api2;
                     _b = i;
                     return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + name5[i] + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
-                case 19:
+                case 20:
                     _a[_b] = _j.sent();
                     _c = data2;
                     _d = i;
                     return [4 /*yield*/, api2[i].json()];
-                case 20:
+                case 21:
                     _c[_d] = _j.sent();
                     image5.push(data2[i].topalbums.album[0].image[2]['#text']);
                     image[i].src = image5[i];
@@ -116,23 +119,23 @@ function getArtist() {
                     _e = api3;
                     _f = i;
                     return [4 /*yield*/, fetch("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + name5[i] + "&api_key=a11aa08044485cfbb982b3336aa0317c&format=json")];
-                case 21:
+                case 22:
                     _e[_f] = _j.sent();
                     _g = data3;
                     _h = i;
                     return [4 /*yield*/, api3[i].json()];
-                case 22:
+                case 23:
                     _g[_h] = _j.sent();
                     track3.push(data3[i].toptracks.track[0].name);
                     track[i].textContent = track3[i];
                     top5.push(data3[i].toptracks.track[0].url);
                     top[i].href = top5[i];
-                    _j.label = 23;
-                case 23:
+                    _j.label = 24;
+                case 24:
                     i++;
-                    return [3 /*break*/, 18];
-                case 24: return [4 /*yield*/, document.getElementById('hidden')];
-                case 25:
+                    return [3 /*break*/, 19];
+                case 25: return [4 /*yield*/, document.getElementById('hidden')];
+                case 26:
                     hide = _j.sent();
                     if (name === true) {
                         hide.style.display = 'none';
