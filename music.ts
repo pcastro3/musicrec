@@ -16,11 +16,11 @@ async function getArtist() {
   let data2 = await api2.json();
   let data3 = await api3.json();
 
-  const name = await document.querySelectorAll('.name');
-  const image = await document.querySelectorAll('.image');
-  const track = await document.querySelectorAll('.track');
-  const url = await document.querySelectorAll('.url');
-  const top = await document.querySelectorAll('.top');
+  const name = await document.querySelectorAll('.name') as unknown as HTMLElement;
+  const image = await document.querySelectorAll('.image') as unknown as HTMLElement;
+  const track = await document.querySelectorAll('.track') as unknown as HTMLElement;
+  const url = await document.querySelectorAll('.url') as unknown as HTMLElement;
+  const top = await document.querySelectorAll('.top') as unknown as HTMLElement;
 
   const name5: string[] = await [];
   const image5: string[] = await [];
@@ -53,9 +53,9 @@ async function getArtist() {
 
   // HIDE THE TABLE
 
-  const hide = await document.getElementById('hidden');
+  const hide = await document.getElementById('hidden')!;
 
-  if (name === true) {
+  if (!name) {
     hide.style.display = 'none';
   } else {
     hide.style.display = 'block';
