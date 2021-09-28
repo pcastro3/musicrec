@@ -7,9 +7,7 @@ async function getArtist() {
   const inputType = await input.value;
 
   const api: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
-
   let api2: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
-
   let api3: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`)
 
   const data = await api.json();
@@ -31,7 +29,7 @@ async function getArtist() {
   for (var i = 0; i < 5; i++) {
     name5.push(data.similarartists.artist[i].name);
     name[i].textContent = name5[i];
-  
+
     api2[i] = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${name5[i]}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
 
     data2[i] = await api2[i].json();
