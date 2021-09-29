@@ -8,7 +8,7 @@ async function getArtist() {
 
   const api: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
   let api2: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
-  let api3: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`)
+  let api3: string | Response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
 
   const data = await api.json();
   let data2 = await api2.json();
@@ -48,6 +48,20 @@ async function getArtist() {
     top5.push(data3[i].toptracks.track[0].url);
     top[i].href = top5[i];
   }
+
+  let store = name5.slice(0, 5);
+  console.log(store);
+
+  function retrieve5() {
+    for (let i = 0; i < store.length; i++) {
+      store[i];
+      console.log(store[i]);
+
+    }
+  }
+
+  api2 = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${retrieve5()}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
+  console.log(api2);
 
   // HIDE THE TABLE
 

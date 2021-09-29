@@ -46,6 +46,20 @@ function getArtist() {
             top5.push(data3[i].toptracks.track[0].url);
             top[i].href = top5[i];
         }
+        let store = name5.slice(0, 5);
+        console.log(store);
+        function retrieve5() {
+            for (let i = 0; i < store.length; i++) {
+                store[i];
+                console.log(store[i]);
+            }
+        }
+        api2 = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${retrieve5()}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
+        console.log(api2);
+        // for (let i = 0; i < array.length; i++) {
+        //   const element = array[i];
+        //
+        // }
         // HIDE THE TABLE
         const hide = yield document.getElementById('hidden');
         if (!name) {
