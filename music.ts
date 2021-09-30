@@ -49,20 +49,6 @@ async function getArtist() {
     top[i].href = top5[i];
   }
 
-  let store = name5.slice(0, 5);
-  console.log(store);
-
-  function retrieve5() {
-    for (let i = 0; i < store.length; i++) {
-      store[i];
-      console.log(store[i]);
-
-    }
-  }
-
-  api2 = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${retrieve5()}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
-  console.log(api2);
-
   // HIDE THE TABLE
 
   const hide = await document.getElementById('hidden')!;
