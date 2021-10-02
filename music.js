@@ -18,41 +18,49 @@ function getArtist() {
         let api2 = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
         let api3 = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${inputType}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
         const data = yield api.json();
-        let data2 = yield api2.json();
-        let data3 = yield api3.json();
-        const name = yield document.querySelectorAll('.name');
-        const image = yield document.querySelectorAll('.image');
-        const track = yield document.querySelectorAll('.track');
-        const url = yield document.querySelectorAll('.url');
-        const top = yield document.querySelectorAll('.top');
-        const name5 = yield [];
-        const image5 = yield [];
-        const track3 = yield [];
-        const url5 = yield [];
-        const top5 = yield [];
-        for (var i = 0; i < 5; i++) {
-            name5.push(data.similarartists.artist[i].name);
-            name[i].textContent = name5[i];
-            api2[i] = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${name5[i]}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
-            data2[i] = yield api2[i].json();
-            image5.push(data2[i].topalbums.album[0].image[2]['#text']);
-            image[i].src = image5[i];
-            url5.push(data2[i].topalbums.album[0].url);
-            url[i].href = url5[i];
-            api3[i] = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name5[i]}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
-            data3[i] = yield api3[i].json();
-            track3.push(data3[i].toptracks.track[0].name);
-            track[i].textContent = track3[i];
-            top5.push(data3[i].toptracks.track[0].url);
-            top[i].href = top5[i];
-        }
-        // HIDE THE TABLE
-        const hide = yield document.getElementById('hidden');
-        if (!name) {
-            hide.style.display = 'none';
+        const showError = yield document.querySelector('.error');
+        if (data.error) {
+            showError.style.display = 'block';
         }
         else {
-            hide.style.display = 'block';
+            let data2 = yield api2.json();
+            let data3 = yield api3.json();
+            const name = yield document.querySelectorAll('.name');
+            const image = yield document.querySelectorAll('.image');
+            const track = yield document.querySelectorAll('.track');
+            const url = yield document.querySelectorAll('.url');
+            const top = yield document.querySelectorAll('.top');
+            const name5 = yield [];
+            const image5 = yield [];
+            const track3 = yield [];
+            const url5 = yield [];
+            const top5 = yield [];
+            for (var i = 0; i < 5; i++) {
+                name5.push(data.similarartists.artist[i].name);
+                name[i].textContent = name5[i];
+                api2[i] = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${name5[i]}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
+                data2[i] = yield api2[i].json();
+                image5.push(data2[i].topalbums.album[0].image[2]['#text']);
+                image[i].src = image5[i];
+                url5.push(data2[i].topalbums.album[0].url);
+                url[i].href = url5[i];
+                api3[i] = yield fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name5[i]}&api_key=a11aa08044485cfbb982b3336aa0317c&format=json`);
+                data3[i] = yield api3[i].json();
+                track3.push(data3[i].toptracks.track[0].name);
+                track[i].textContent = track3[i];
+                top5.push(data3[i].toptracks.track[0].url);
+                top[i].href = top5[i];
+            }
+            // HIDE THE TABLE
+            const hide = yield document.getElementById('hidden');
+            if (name) {
+                hide.style.display = 'block';
+            }
         }
+        // if (!name) {
+        //   hide.style.display = 'none';
+        // } else {
+        //   hide.style.display = 'block';
+        // }
     });
 }
