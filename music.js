@@ -67,10 +67,5 @@ function getArtist() {
                 hide.style.display = 'block';
             }
         }
-        // if (!name) {
-        //   hide.style.display = 'none';
-        // } else {
-        //   hide.style.display = 'block';
-        // }
     });
 }
