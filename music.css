@@ -161,16 +161,16 @@ table {
   position: relative;
 }
 
-@media screen and (max-width: 557px) {
+@media screen and (min-width: 320px) {
   table {
-    width: 100vw;
+    width: 90%;
   }
 }
 
 tbody {
   display: block;
-  border: 1px solid black;
-  border-radius: 2rem;
+  border-radius: .75rem;
+  box-shadow: 5px 5px 17px 4px black;
   color: lightgrey;
   background-color: #231F25;
   background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(52,46,55,1) 50%, rgba(0,0,0,1) 100%);
