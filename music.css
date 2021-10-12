@@ -9,32 +9,7 @@
   background-image: url(/images/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 120vh;
-}
-
-@media screen and (max-width: 898px) {
-  .wallpaper {
-    height: 126vh;
-  }
-}
-
-@media screen and (max-width: 790px) {
-  .wallpaper {
-    height: 130vh;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .wallpaper {
-    height: 115vh;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .heading {
-    height: 100vh;
-    margin-bottom: -40rem !important;
-  }
+  height: 99vh;
 }
 
 /* MUSE FINDER */
@@ -44,58 +19,51 @@
   justify-content: center;
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 6rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   text-transform: uppercase;
   letter-spacing: 10px;
   text-shadow: 6px 7px 8px black;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (min-width: 330px) {
   .heading {
-    font-size: 5rem;
+    font-size: 1.6rem;
+    margin-top: 1rem;
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (min-width: 375px) {
   .heading {
-    font-size: 4.5rem;
+    font-size: 2rem;
   }
 }
 
-@media screen and (max-width: 709px) {
-  .heading {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .heading {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 450px) {
   .heading {
     font-size: 2.3rem;
   }
 }
 
-@media screen and (max-width: 349px) {
+@media screen and (min-width: 570px) {
   .heading {
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (min-width: 709px) {
   .heading {
-    font-size: 1.3rem;
-    margin-top: 1rem;
+    font-size: 3.5rem;
   }
 }
 
+@media screen and (min-width: 770px) {
+  .heading {
+    font-size: 4rem;
+  }
+}
 
 /* INPUT */
 
@@ -178,67 +146,35 @@ tbody {
   background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(52,46,55,1) 50%, rgba(0,0,0,1) 100%);
 }
 
-@media screen and (max-width: 1155px) {
+@media screen and (min-width: 330px) {
   tbody {
-    height: 72vh;
+    height: 70vh;
+    font-size: .75rem;
   }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (min-width: 375px) {
   tbody {
-    height: 72vh;
-  }
-}
-
-@media screen and (max-width: 898px) {
-  tbody {
-    height: 75vh;
-  }
-}
-
-@media screen and (max-width: 813px) {
-  tbody {
-    height: 78vh;
-  }
-}
-
-@media screen and (max-width: 790px) {
-  tbody {
-    height: 82vh;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  tbody {
-    height: 85vh;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  tbody {
-    height: 76vh;
+    height: 70vh;
     font-size: .8rem;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 450px) {
   tbody {
-    height: 76vh;
-    font-size: .7rem;
+    font-size: .9rem;
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 570px) {
   tbody {
-    height: 76vh;
-    font-size: .7rem;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (min-width: 770px) {
   tbody {
-    height: 70vh;
-    font-size: .6rem;
+  font-size: 1.1rem;
   }
 }
 
@@ -246,6 +182,12 @@ tbody {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  height: 18.5%;
+}
+
+tr td {
+  display: flex;
+  align-items: center;
 }
 
 #even {
@@ -339,17 +281,34 @@ tbody {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 2rem;
 }
 
 .image {
   width: auto;
-  height: 5rem;
+  height: 4rem;
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (min-width: 330px) {
   .image {
-    height: 4rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .image {
+    height: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .image {
+    height: 6rem;
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .image {
+    height: 7rem;
   }
 }
 
@@ -361,7 +320,6 @@ tbody {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 2rem;
 }
 
 /* ANIMATIONS */
